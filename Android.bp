@@ -5,10 +5,3 @@
 soong_namespace {
 }
 
-dex_import {
-	name: "com.motorola.hardware.camera.desktop",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/com.motorola.hardware.camera.desktop.jar"],
-	system_ext_specific: true,
-}
-
