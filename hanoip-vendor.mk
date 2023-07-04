@@ -6,6 +6,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/motorola/hanoip
 
 PRODUCT_COPY_FILES += \
+    vendor/motorola/hanoip/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone \
+    vendor/motorola/hanoip/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc \
     vendor/motorola/hanoip/proprietary/vendor/bin/vl53l1_daemon_main:$(TARGET_COPY_OUT_VENDOR)/bin/vl53l1_daemon_main \
     vendor/motorola/hanoip/proprietary/vendor/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/motorola/hanoip/proprietary/vendor/etc/acdbdata/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Codec_cal.acdb \
@@ -27,6 +29,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/hanoip/proprietary/vendor/etc/camera/dual_golden_wide_64M.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/dual_golden_wide_64M.bin \
     vendor/motorola/hanoip/proprietary/vendor/etc/camera/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration \
     vendor/motorola/hanoip/proprietary/vendor/etc/camera/vidhance_calibration_64:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration_64 \
+    vendor/motorola/hanoip/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    vendor/motorola/hanoip/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     vendor/motorola/hanoip/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_tm_ili7807s_fhd_678.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_tm_ili7807s_fhd_678.xml \
     vendor/motorola/hanoip/proprietary/vendor/etc/sensors/config/default_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/default_sensors.json \
     vendor/motorola/hanoip/proprietary/vendor/etc/sensors/config/icm4x6xx_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/icm4x6xx_0.json \
@@ -172,6 +176,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/hanoip/proprietary/vendor/firmware/aw882xx_monitor.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw882xx_monitor.bin \
     vendor/motorola/hanoip/proprietary/vendor/firmware/aw882xx_rcv_reg.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw882xx_rcv_reg.bin \
     vendor/motorola/hanoip/proprietary/vendor/firmware/aw882xx_spk_reg.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw882xx_spk_reg.bin \
+    vendor/motorola/hanoip/proprietary/vendor/lib/hw/chipone.fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/chipone.fingerprint.default.so \
+    vendor/motorola/hanoip/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a_eeprom.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_ov32b_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_gt24p64e_ov32b_eeprom.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_ov64b_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_gt24p64e_ov64b_eeprom.so \
@@ -245,7 +251,9 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/hanoip/proprietary/vendor/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreviewlite.bin \
     vendor/motorola/hanoip/proprietary/vendor/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideo.bin \
     vendor/motorola/hanoip/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin \
+    vendor/motorola/hanoip/proprietary/vendor/lib64/com.fingerprints.extension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints.extension@1.0.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
+    vendor/motorola/hanoip/proprietary/vendor/lib64/hw/chipone.fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/chipone.fingerprint.default.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libarcsoft_distortion_correction.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_distortion_correction.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libarcsoft_zoomtranslator_imp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_zoomtranslator_imp.so \
@@ -260,11 +268,13 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2vop.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcom.qti.chinodeutils.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libfcell.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfcell.so \
+    vendor/motorola/hanoip/proprietary/vendor/lib64/libfp_ext_svc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfp_ext_svc2.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libmot_afd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmot_afd.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libmot_lux_standardization.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmot_lux_standardization.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpbase.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libmulticam_optical_zoom_control.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmulticam_optical_zoom_control.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libmulticam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmulticam_video_optical_zoom.so \
+    vendor/motorola/hanoip/proprietary/vendor/lib64/libpn557_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpn557_fw.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libsns_device_mode_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_device_mode_stub.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libsns_fastRPC_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_fastRPC_util.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libsns_low_lat_stream_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_low_lat_stream_stub.so \
@@ -275,4 +285,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswvdec.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libvidhance.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvidhance.so \
     vendor/motorola/hanoip/proprietary/vendor/lib64/libvl53l1_daemon_main.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvl53l1_daemon_main.so \
-    vendor/motorola/hanoip/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so
+    vendor/motorola/hanoip/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
+    vendor/motorola/hanoip/proprietary/vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so \
+    vendor/motorola/hanoip/proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fingerprint@1.0.so
